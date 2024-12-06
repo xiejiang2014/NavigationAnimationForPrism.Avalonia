@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:regions="http://prismlibrary.com/"
+        xmlns:avalonia="clr-namespace:NavigationAnimationForPrism.Avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="NavigationAnimationForPrism.Avalonia.MainWindow"
+        Title="NavigationAnimationForPrism.Avalonia">
+    <Grid RowDefinitions="*,Auto">
+        <avalonia:InOutContentControl x:Name="InOutContentControl" regions:RegionManager.RegionName="{x:Static avalonia:RegionNames.ContentRegion}" />
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Click="ButtonA_OnClick">ToViewX</Button>
+            <Button Click="ButtonB_OnClick">ToViewY</Button>
+        </StackPanel>
+    </Grid>
+</Window>
